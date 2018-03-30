@@ -83,9 +83,11 @@ const GRADE_1 = {
 export default [
   GRADE_1, {
     ...GRADE_1,
-    grade: '2'
+    grade: '2',
+    content: GRADE_1.content.filter(({ title }) => title !== 'Broken chords'),
   }, {
     ...GRADE_1,
     grade: '3',
+    content: GRADE_1.content.filter(({ title }) => title !== 'Scales'),
   },
 ];
